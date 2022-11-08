@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Raleway&family=Roboto:ital,wght@1,500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.root {
+    background-color: #efe7e5;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Henny Penny";
+}
+
+.root {
+    background-color: #efe7e5;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #f2cc0f;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+@media(max-width:991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid #000;
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background-color: #fff;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+/*--slider---*/
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-siza: cover;
+    background-size: cover;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    padding: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+h1 {
+    text-decoration: none;
+
+}
+
+p {
+    line-height: 25px;
+
+}
+
+span img {
+    width: 400px;
+    height: 250px;
+    float: right;
+    margin-left: 20px;
+    border: 7px;
+}
+
+.card {
+    background: #fff;
+    width: 720px;
+    height: 270px;
+    margin: 10px;
+
+}
+
+.card img {
+    display: center;
+
+}
+
+.wrapper {
+    margin: 10px auto;
+    padding: 0 10%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #000;
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 15px;
+    text-shadow: 0 15px 10px rgba(0, 0, 0, 0.2)
+}
+
+.container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+    height: 70px;
+}
+
+.box h3 {
+    color: #444;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.box p {
+    color: #777;
+    font: size 14px;
+    line-height: 1.6;
+}
+
+.btn {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #333;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    translate: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media(max-width:770px) {
+    .wrapper {
+        padding: 20px;
+    }
+}
